@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$red:#FC0733;
+$light-grey:#EDEDED;
+$blue:#0029FF;
+$green:#0CF20C;
+$grey:#5A5A5A;
+$line-color:#D6D6D6;
+$bg-grey:#E5E5E5;
+$section-grey:#f8f8f8;
+$heading-size: 26px;
+$title-size: 20px;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+@function weight($name){
+    @return map-get($font-weights, $name);
+}
+
+@mixin borderBottom{
+    border-bottom: 2px solid $red;
+}
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexItems($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin media-min($size) {
+    @media screen and (min-width: $size){
+        @content;
+    }
+}
+@mixin media-max($size) {
+    @media screen and (max-width: $size){
+        @content;
+    }
+}

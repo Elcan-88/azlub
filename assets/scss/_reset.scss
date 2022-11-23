@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    font-weight: weight(regular);
+    font-size: 14px;
+    line-height: 19px;
+}
+
+h1,h3{
+    font-size: 26px;
+    font-weight: weight(bold);
+}
+h4{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    &:hover{
+        color: #000;
+    }
+}
+p{
+    margin-bottom: 0;
+}
+hr{
+    background-color: #c9c9c9;
+}
+hr.line-grey{
+    background-color: $grey;
+    height: 3px;
+}
+
+ul, li, ol{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    padding: 0;
+}
+.border-bottom{
+    border-bottom: 2px solid $red !important;
+}
+.borderBottom{
+    border-bottom: 1px solid $line-color;
+}
+.color-grey{
+    color: $grey;
+}
+.color-red{
+    color: $red;
+}
+.bg-grey{
+    background-color: $section-grey;
+}
+.semi-title{
+    font-size: $title-size;
+    font-weight: weight(bold);
+    line-height: 23.44px;
+}
+.font-20{
+    font-size: 20px;
+}
+.scale-effect{
+    &:hover{
+        .hover-item{
+            img{
+                transform: scale(1.1);
+            }
+        }
+        .card-title{
+            color: $red;
+            transition: 0.3s;
+        }
+    }
+    .hover-item{
+        overflow: hidden;
+        img{
+            transition: all .5s;
+        }
+    }
+    
+}
+
+.container-inner{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    @include media-max(992px){
+        width: 90%;
+    }
+    @include media-max(768px){
+        width: 100%;
+    }
+}
+
+// Forms
+
+.form-label{
+    margin-bottom: 7px;
+    font-weight: weight(bold);
+}
+.form-control{
+    border: 1px solid $line-color;
+    border-radius: 5px;
+    padding: .2rem .75rem;
+    font-size: inherit;
+    &:focus{
+        box-shadow: none;
+        border: 1px solid $line-color;
+    }
+    &::placeholder{
+        color: $grey;
+    }
+}
+.button{
+    background-color: $red;
+    color: #fff;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.03);
+    border: none;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: weight(bold);
+    padding: 5px 26px;
+}
+button.btn:focus{
+    box-shadow: none;
+}
+
+.more-btn{
+    display: flex;
+    align-items: center;
+    img{
+        height: 12px;
+    }
+    span{
+        font-weight: 900;
+        border-bottom: 1px solid #000;
+        margin-right: 7px;
+    }
+}
