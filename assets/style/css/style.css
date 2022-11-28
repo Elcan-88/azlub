@@ -204,8 +204,44 @@ button.btn:focus {
   height: 48px;
 }
 
-.nav .navbar-area .navbar__item {
-  margin-right: 15px;
+.nav .navbar-area .navbar__item.has-submenu {
+  position: relative;
+}
+
+.nav .navbar-area .navbar__item.has-submenu:hover a.navbar__link {
+  padding-right: 45px;
+}
+
+.nav .navbar-area .navbar__item.has-submenu:hover ul {
+  display: block;
+}
+
+.nav .navbar-area .navbar__item.has-submenu ul {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  background-color: #FC0733;
+  padding: 20px 16px 10px;
+  z-index: 100;
+  transition: 0.4s;
+  display: none;
+}
+
+.nav .navbar-area .navbar__item.has-submenu ul li {
+  margin-bottom: 7px;
+}
+
+.nav .navbar-area .navbar__item.has-submenu ul li a {
+  color: #fff;
+}
+
+.nav .navbar-area .navbar__item.has-submenu ul li a:hover {
+  color: #FF98AA;
+}
+
+.nav .navbar-area .navbar__item.has-submenu a.navbar__link {
+  padding: 16px 45px 16px 23px;
 }
 
 .nav .navbar-area .navbar__link {
@@ -219,19 +255,10 @@ button.btn:focus {
   color: #fff;
 }
 
-.nav .navbar-area .navbar__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 0px;
-  width: 100%;
-  background-color: #E5E5E5;
+.nav .navbar-area .navbar__link:hover {
+  background-color: #FC0733;
+  color: #fff;
   transition: 0.3s;
-}
-
-.nav .navbar-area .navbar__link:hover:not(.active)::after {
-  height: 5px;
 }
 
 .nav .navbar-area .nav-toggle {
@@ -1298,6 +1325,12 @@ section .page-header__title {
 }
 
 @media screen and (max-width: 992px) {
+  .nav .navbar-area {
+    border-top: 0;
+    width: unset;
+    justify-content: flex-end;
+    padding: 20px 0 10px;
+  }
   .nav .navbar-area .navbar__item {
     margin-right: 0;
   }
@@ -1383,12 +1416,6 @@ section .page-header__title {
 }
 
 @media screen and (max-width: 768px) {
-  .nav .navbar-area {
-    border-top: 0;
-    width: unset;
-    justify-content: flex-end;
-    padding: 20px 0 10px;
-  }
   .ourproducts_text {
     order: 1;
   }

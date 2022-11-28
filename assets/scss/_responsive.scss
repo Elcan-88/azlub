@@ -1,6 +1,10 @@
 @include media-max(992px){
     .nav{
         .navbar-area{
+            border-top: 0;
+            width: unset;
+            justify-content: flex-end;
+            padding: 20px 0 10px;
             .navbar__item{
                 margin-right: 0;
                 .navbar__link{
@@ -138,15 +142,6 @@
 }
 
 @include media-max(768px){
-    .nav{
-        .navbar-area{
-            border-top: 0;
-            width: unset;
-            justify-content: flex-end;
-            padding: 20px 0 10px;
-            
-        }
-    }
     .ourproducts {
         &_text {
             order: 1;

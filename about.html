@@ -12,7 +12,7 @@
 
     <div class="container">
         <header>
-            <div class="top-bar">
+            <div class="top-bar d-none d-lg-block">
                 <ul class="list-unstyled">
                     <li>
                         <a href="">Responsibility</a>
@@ -30,12 +30,23 @@
                     <a href="/"><img src="./assets/img/logo/alco-logo.png" alt="ALCO LLC"></a>
                 </div>
                 <div class="navbar-area">
-                    <ul class="navbar list-unstyled">
+                    <ul class="navbar list-unstyled d-none d-lg-flex">
                         <li class="navbar__item">
                             <a href="/" class="navbar__link">Home</a>
                         </li>
-                        <li class="navbar__item">
+                        <li class="navbar__item has-submenu">
                             <a href="about/about.html" class="navbar__link active">About</a>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#">Who we are</a>
+                                </li>
+                                <li>
+                                    <a href="#">What we do</a>
+                                </li>
+                                <li>
+                                    <a href="#">Our values</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="navbar__item">
                             <a href="manufacturing.html" class="navbar__link">Manufacturing</a>
@@ -50,7 +61,29 @@
                             <a href="products/products.html" class="navbar__link">Products</a>
                         </li>
                     </ul>
-                    <img src="./assets/img/search.svg" alt="Search">
+                    <div class="search-btn">
+                        <img src="./assets/img/search.svg" alt="Search">
+                    </div>
+
+                    <div class="d-lg-none ms-3 ">
+                        <button class="btn nav-toggle "></button>
+                    </div>
+
+                    <div class="responsive-navbar d-none d-lg-none pb-0">
+                        <ul class="list-unstyled container">
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link" href="">Home</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link" href="">About</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link" href="">Manufacturing</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link" href="">Trade</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link" href="">Logistics</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link" href="">Products</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link topBar" href="">Responsibility</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link topBar" href="">Practices</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link topBar" href="">Career</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link topBar" href="">News</a></li>
+                            <li class="responsive-navbar_list"><a class="responsive-navbar_link topBar" href="">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">

@@ -23,8 +23,43 @@
         .navbar{
             height: 48px;
             &__item{
-                margin-right: 15px;
+                // margin-right: 15px;
+                &.has-submenu{
+                    position: relative;
+                    &:hover{
+                        a.navbar__link{
+                            padding-right: 45px;
+                        }
+                        ul{
+                            display: block;
+                        }
+                    }
+                    ul{
+                        position: absolute;
+                        top: 15px;
+                        left: 0;
+                        width: 100%;
+                        background-color: $red;
+                        padding: 20px 16px 10px;
+                        z-index: 100;
+                        transition: 0.4s;
+                        display: none;
+                        li{
+                            margin-bottom: 7px;
+                            a{
+                                color: #fff;
+                                &:hover{
+                                    color: #FF98AA;
+                                }
+                            }
+                        }
+                    }
+                    a.navbar__link{
+                        padding: 16px 45px 16px 23px;
+                    }
+                }
             }
+            
             &__link{
                 padding: 16px 23px;
                 font-weight: weight(bold);
@@ -33,20 +68,10 @@
                     background-color: $red;
                     color: #fff;
                 }
-                &::after{
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    height: 0px;
-                    width: 100%;
-                    background-color: $bg-grey;
+                &:hover{
+                    background-color: $red;
+                    color: #fff;
                     transition: 0.3s;
-                }
-                &:hover:not(.active){
-                    &::after{
-                        height: 5px;
-                    }
                 }
             }
         }
